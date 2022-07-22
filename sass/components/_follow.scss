@@ -1,0 +1,39 @@
+.follow {
+}
+
+.follow__title {
+    @extend %footerTitle;
+}
+
+.follow__form {
+
+}
+
+.follow__label {
+    display: inline-block;
+
+    margin-bottom: 20px;
+    
+}
+.follow__input {
+    
+    padding: 15px 0px 15px 16px;
+    width: 358px;
+    height: 50px;
+    color: #FFFFFF;
+    background-color: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));  
+}
+.follow_button {
+    @include flex-centered();
+    @extend %button;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.follow__icon {
+    margin-left: 10px;
+}

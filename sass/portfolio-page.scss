@@ -1,0 +1,35 @@
+@import 'utils/variables';
+@import 'base/normalized';
+@import 'utils/placeholders';
+@import 'utils/mixin';
+
+@import 'components/body';
+@import 'components/container';
+
+// Верхняя линия
+@import 'components/header';
+@import 'components/logo-page';
+@import 'components/navigation';
+@import 'components/contact';
+
+// Filter
+@import 'components/filter';
+
+// Portfolio
+@import 'components/portfolio';
+
+
+
+
+
+// Footer
+@import 'components/footer';
+
+// Address
+@import 'components/address';
+
+// Join
+@import 'components/join';
+
+// Follow
+@import 'components/follow';

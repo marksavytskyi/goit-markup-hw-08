@@ -1,0 +1,40 @@
+.address {
+    margin-bottom: 60px;
+}
+
+.logo__title-white {
+    color: #ffffff;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+}
+
+.logo__title--accent {}
+
+.address__list {
+    @extend %resetListStyles;
+
+    margin-top: 20px;
+}
+
+
+.address__item {
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.address__link {
+    @extend %resetLinkStyles;
+    @extend %resetTextStyles;
+    
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+}
+
+.address__link--accent {
+    color: #ffffff;
+}

@@ -1,0 +1,43 @@
+@import 'utils/variables';
+@import 'base/normalized';
+@import 'utils/placeholders';
+@import 'utils/mixin';
+@import 'utils/is-hidden';
+
+@import 'components/body';
+@import 'components/container';
+
+@import 'components/mobile';
+
+// Modale
+@import 'components/modale';
+
+
+
+// Hero
+@import 'components/_hero.scss';
+
+// Features
+@import 'components/_features';
+
+// Specialization
+@import 'components/_specialization.scss';
+
+// Team
+@import'components/team';
+
+// Clients
+@import 'components/clients';
+
+// Footer
+@import 'components/footer';
+
+// Address
+@import 'components/address';
+
+// Join
+@import 'components/join';
+
+// Follow
+@import 'components/follow';
+

@@ -1,0 +1,50 @@
+.feature {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.feature__list {
+    @extend %resetListStyles;
+    
+}
+
+.feature__item {
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+}
+.feature__thumb {
+    width: 100%;
+    background-color: #F5F4FA;
+}
+.feature__icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    height: 120px;
+    
+}
+
+.feature__title {
+    @extend %resetTextStyles;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.feature__text {
+    @extend %resetTextStyles;
+
+    font-size: 14px;
+    line-height: 1.71;
+    color: $colorTextSecondary;
+}

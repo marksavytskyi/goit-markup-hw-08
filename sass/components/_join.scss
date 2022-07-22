@@ -1,0 +1,39 @@
+.join {
+    margin-bottom: 60px;
+}
+
+.join__title {
+    @extend %footerTitle;
+}
+
+.join__list {
+    @extend %resetListStyles;
+
+    display: flex;
+    justify-content: center;
+}
+
+.join__item {
+    margin-right: 10px;
+
+    &:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+.join__link {
+    @include flex-centered();
+    @extend %socialIconLink;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: #ffffff;
+
+    &:hover,
+    &:focus {
+        background-color: $colorAccent;
+    }
+}
+
+.join__icon {}
+
+.icon {}

@@ -1,0 +1,23 @@
+.button-burger {
+    display: inline-flex;
+
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    // background-color: transparent;
+    border: none;
+    
+    & .icon-cross {
+        display: none;
+    }
+    &.is-open .icon-cross {
+        display: inline;
+        }
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
+
+.button-burger__icon {
+
+}

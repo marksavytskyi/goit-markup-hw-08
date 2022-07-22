@@ -1,0 +1,189 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(.53, .1, .51, 1.13),
+                opacity 250ms linear;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+
+    width: 528px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.form {}
+
+.form__title {
+    @extend %resetTextStyles;
+    margin-bottom: 12px;
+    text-align: center;
+    
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 0.95;
+}
+
+.form__label {
+    
+}
+
+.form__subtitle {
+    display: block;
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
+.form__thumb {
+    position: relative;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.form__input {
+    @extend %formOutline;
+
+    width: 100%;
+    height: 100%;
+    padding-left: 42px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        border-color: #2196F3;
+    }
+    &:focus + .form__icon {
+        fill: #2196F3;
+    }
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.comment__label {
+    margin-bottom: 20px;
+}
+
+.form__comment {
+    @extend %formOutline;
+
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+    
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.policy {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.policy__label {
+    @include flex-centered();
+
+    position: relative;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575;
+}
+
+.policy__checkbox {
+    @extend %checkboxHidden;    
+
+    &:checked + .policy__icon {
+        background-color: #2196F3;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.policy__icon {
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    margin-right: 7px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E");
+}
+
+.policy__text {
+    @extend %resetTextStyles;
+}
+
+.policy__link {
+    color: #2196F3;
+}
+
+
+
+.form__button {
+    @extend %button;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.modale__button-close {
+    @include flex-centered();
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 30px;
+    height: 30px;
+    margin-top: 8px;
+    margin-right: 8px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    background: #FFFFFF;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+            fill: #2196F3;
+        }
+}

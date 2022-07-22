@@ -1,0 +1,51 @@
+.contact {
+    @extend %resetListStyles;
+    @extend %resetTextStyles;
+    @include flex-centered();
+    
+    margin-left: auto;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.contact__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.contact__link {
+    @extend %resetLinkStyles;
+    color: $colorTextSecondary;
+
+    display: flex;
+    align-items: center;
+
+    height: 16px;
+
+    transition: $transitionColorAccent;
+
+    &:hover,
+    &:focus {
+        color: $colorAccent;
+    }
+}
+
+.contact__icon {
+    margin-right: 10px;
+
+    fill: #757575;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .contact__link:hover &,
+    .contact__link:focus & {
+        fill: $colorAccent;
+    }
+
+}
