@@ -1,5 +1,7 @@
 .button-burger {
-    display: inline-flex;
+    
+    width: 40px;
+    height: 40px;
 
     padding: 0;
     margin: 0;
@@ -11,13 +13,24 @@
         display: none;
     }
     &.is-open .icon-cross {
-        display: inline;
+        display: block;
         }
     &.is-open .icon-menu {
         display: none;
     }
+
+    &.is-open .button-burger__icon {
+        width: 18.67px;
+        height: 18.67px;
+        background-color: aqua;
+    }
+    & .button-burger__icon {
+        width: 24px;
+        height: 16px;
+        background-color: aqua;
+    }
 }
 
 .button-burger__icon {
-
+    
 }

@@ -22,21 +22,50 @@
             </span>
         </a>
 
-        <!-- <nav class="navigation">
+        <!--  -->
+        <button type="button" class="button-burger" aria-label="Переключатель мобильного меню" aria-expanded="false" data-menu-button>
+            <svg class="button-burger__icon">
+                <use class="icon-menu" href="./image/logo/icons.svg#icon-menu"></use>
+                <use class="icon-cross" href="./image/logo/icons.svg#icon-cross"></use>
+            </svg>
+        </button>
+
+        <div class="menu-container">
+
+        <nav class="navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
                 <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
                 <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Контакты</a></li>
             </ul>
+        
+            <ul class="contact">
 
-            
-        </nav> -->
-        <button type="button" class="button-burger" aria-label="Переключатель мобильного меню" data-menu-button>
-            <svg class="button-burger__icon" width="40" height="40">
-                <use class="icon-menu" href="./image/logo/icons.svg#icon-menu"></use>
-                <use class="icon-cross" href="./image/logo/icons.svg#icon-cross"></use>
-            </svg>
-            </button>
+            <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__link contact__link--tel">
+                    <svg class="contact__icon" width="10" height="16">
+                        <use href="./image/logo/icons.svg#icon-mobile"></use>
+                    </svg>+38 096 111 11 11</a>
+            </li>
+
+            <li class="contact__item">
+                <a href="mailto:info@devstudio.com" class="contact__link">
+                    <svg class="contact__icon" width="16" height="12">
+                        <use href="./image/logo/icons.svg#icon-mail"></use>
+                    </svg><span>info@devstudio.com</span></a>
+            </li>
+
+            <ul class="contact-social__list">
+                <li class="contact-social__item"><a class="contact-social__link" href="./">Instagram</a></li>
+                <li class="contact-social__item"><a class="contact-social__link" href="./">Twitter</a></li>
+                <li class="contact-social__item"><a class="contact-social__link" href="./">Facebook</a></li>
+                <li class="contact-social__item"><a class="contact-social__link" href="./">LinkedIn</a></li>
+            </li>
+
+        </ul>
+        </nav>
+
+        </div>
             
 <!-- 
         <ul class="contact">
