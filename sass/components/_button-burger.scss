@@ -7,11 +7,7 @@
     border: none;
     z-index: 3;
 
-    &.is-open {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-    }
+    
     
     & .icon-menu {
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

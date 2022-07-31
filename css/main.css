@@ -691,11 +691,6 @@ header {
   border: none;
   z-index: 3;
 }
-.button-burger.is-open {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
 .button-burger .icon-menu {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
