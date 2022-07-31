@@ -1,26 +1,53 @@
+
+
 .backdrop {
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+    z-index: 4;
 
     transform: scale(1);
     transition: transform 250ms cubic-bezier(.53, .1, .51, 1.13),
-                opacity 250ms linear;
+        opacity 250ms linear;
+
+
+    @media screen and (max-width: 767px) {
+        padding: 93px 15px;
+    }
+
+    @media screen and (min-width: 480px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+
+    
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     padding: 40px;
+    width: calc(100vw - 30px);
 
-    width: 528px;
     background-color: #fff;
-    z-index: 2;
+    z-index: 4;
+
+    @media screen and (min-width: 480px) {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+    }
+
+
 }
 
 .form {}
@@ -47,6 +74,7 @@
     line-height: 1.16;
     letter-spacing: 0.01em;
     color: #757575;
+
 }
 
 .form__thumb {
@@ -69,6 +97,7 @@
     &:focus + .form__icon {
         fill: #2196F3;
     }
+
 }
 
 .form__icon {
@@ -114,15 +143,25 @@
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+
 }
 
 .policy__label {
     @include flex-centered();
 
-    position: relative;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     color: #757575;
+    @media screen and (max-width: 479px) {
+           font-size: 6px;
+           line-height: 1;
+        }
+    
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .policy__checkbox {
@@ -138,10 +177,11 @@
 }
 
 .policy__icon {
+
     width: 16px;
     height: 15px;
     border-radius: 2px;
-    margin-right: 7px;
+    margin-right: 8px;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2222 1.66667V13.3333H1.77778V1.66667H14.2222ZM14.2222 0H1.77778C0.8 0 0 0.75 0 1.66667V13.3333C0 14.25 0.8 15 1.77778 15H14.2222C15.2 15 16 14.25 16 13.3333V1.66667C16 0.75 15.2 0 14.2222 0Z' fill='%23212121'/%3E%3C/svg%3E");
 }
 

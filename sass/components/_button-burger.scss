@@ -1,36 +1,45 @@
 .button-burger {
-    
-    width: 40px;
-    height: 40px;
 
     padding: 0;
     margin: 0;
     margin-left: auto;
-    // background-color: transparent;
+    background-color: transparent;
     border: none;
+    z-index: 3;
+
+    &.is-open {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
     
-    & .icon-cross {
+    & .icon-menu {
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+                fill: $colorAccent;
+            }
+    }
+    & .icon-close {
         display: none;
     }
-    &.is-open .icon-cross {
+    &.is-open .icon-close {
         display: block;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+                fill: $colorAccent;
+            }
         }
     &.is-open .icon-menu {
         display: none;
     }
 
-    &.is-open .button-burger__icon {
-        width: 18.67px;
-        height: 18.67px;
-        background-color: aqua;
-    }
-    & .button-burger__icon {
-        width: 24px;
-        height: 16px;
-        background-color: aqua;
+    @media screen and (min-width: 768px) {
+        display: none;
     }
 }
 
 .button-burger__icon {
-    
+
 }

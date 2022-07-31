@@ -1,24 +1,49 @@
 .follow {
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
 }
 
 .follow__title {
     @extend %footerTitle;
+
+
+    @media screen and (max-width: 1200px) {
+    text-align: center;
+    }
 }
 
 .follow__form {
-
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .follow__label {
-    display: inline-block;
+    
+    display: block;
 
-    margin-bottom: 20px;
+
+    @media screen and (max-width: 1200px) {
+        margin-bottom: 20px;
+    };
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-right: 12px;
+    }
     
 }
 .follow__input {
-    
+    display: block;
+    width: 100%;
     padding: 15px 0px 15px 16px;
-    width: 358px;
+
     height: 50px;
     color: #FFFFFF;
     background-color: transparent;
@@ -26,6 +51,7 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));  
+
 }
 .follow_button {
     @include flex-centered();

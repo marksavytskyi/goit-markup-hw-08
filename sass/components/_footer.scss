@@ -2,9 +2,29 @@
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
+
+   
+}
+
+.footer__row {
+    @media screen and (min-width:1200px) {
+            display: flex;
+            flex-direction: row;
+        }
 }
 
 .footer__flex {
-    text-align: center;
-}
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        
+    }
+}

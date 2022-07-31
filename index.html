@@ -8,9 +8,85 @@
     <link rel="stylesheet" href="./dist/css/main.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   </head>
-</html>
 
 <body>
+    <!-- Модальное окно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <form class="form">
+                <h2 class="form__title">Оставьте свои данные, мы вам перезвоним</h2>
+
+                
+                    <label class="form__label">
+                        <span class="form__subtitle">Имя</span>
+                        <div class="form__thumb">
+                            <input type="text" name="name" class="form__input">
+                            <svg class="form__icon">
+                                <use href="./image/logo/icons.svg#icon-person-form"></use>
+                            </svg>
+                        </div>
+                    </label>
+                
+
+                    <label class="form__label">
+                        <span class="form__subtitle">Телефон</span>
+                        <div class="form__thumb">
+                            <input type="tel" name="tel" class="form__input">
+                            <svg class="form__icon">
+                                <use href="./image/logo/icons.svg#icon-tel-form"></use>
+                            </svg>
+                        </div>
+                    </label>
+                
+
+                
+                    <label class="form__label">
+                        <span class="form__subtitle">Почта</span>
+                        <div class="form__thumb">
+                            <input type="email" name="mail" class="form__input">
+                            <svg class="form__icon">
+                                <use href="./image/logo/icons.svg#icon-email-form"></use>
+                            </svg>                           
+                        </div>
+                    </label>
+                    
+
+
+                
+                    <label class="form__label comment__label">
+                        <span class="form__subtitle">Комментарий</span>
+                        <textarea name="comment" rows="8" class="form__comment" placeholder="Введите текст"></textarea>
+                    </label>
+                
+
+                
+                    
+                    <div class="policy">
+                        <label for="checkbox" class="policy__label">
+                        
+                            <input type="checkbox" name="policy" class="policy__checkbox" id="checkbox">
+                            <span class="policy__icon"></span>
+                            <span class="policy__text">Соглашаюсь с рассылкой и принимаю <a href="./index.html" class="policy__link">Условия
+                                    договора</a>
+                            </span>
+                            
+                        </label>
+                    </div>
+                        
+                    
+                
+
+                    <button type="submit" class="form__button">Отправить</button>
+            </form>
+            
+                <button type="button" class="modale__button-close" data-modal-close>
+                    <svg width="11" height="11" class="modale__icon">
+                    <use href="./image/logo/icons.svg#icon-crist"></use>
+                    </svg>
+                </button>
+        </div>
+        
+    </div>
   <!-- Верхняя линия -->
   <!-- prettier-ignore -->
   <header>
@@ -23,68 +99,56 @@
         </a>
 
         <!--  -->
-        <button type="button" class="button-burger" aria-label="Переключатель мобильного меню" aria-expanded="false" data-menu-button>
-            <svg class="button-burger__icon">
+        
+        <button type="button" class="button-burger" aria-label="Переключатель мобильного меню" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg class="button-burger__icon" width='40' height= '40'>
                 <use class="icon-menu" href="./image/logo/icons.svg#icon-menu"></use>
-                <use class="icon-cross" href="./image/logo/icons.svg#icon-cross"></use>
+                <use class="icon-close" href="./image/logo/icons.svg#icon-close"></use>
             </svg>
         </button>
 
-        <div class="menu-container">
-
-        <nav class="navigation">
-            <ul class="navigation__list">
-                <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
-                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
-                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Контакты</a></li>
-            </ul>
+        <div class="menu-container" id="menu-container" data-menu>
         
-            <ul class="contact">
 
-            <li class="contact__item">
-                <a href="tel:+380961111111" class="contact__link contact__link--tel">
-                    <svg class="contact__icon" width="10" height="16">
-                        <use href="./image/logo/icons.svg#icon-mobile"></use>
-                    </svg>+38 096 111 11 11</a>
-            </li>
+            <div class="navigation">
+                <nav>
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="./index.html" class="navigation__link navigation__link--accent">Студия</a></li>
+                        <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
+                        <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-            <li class="contact__item">
-                <a href="mailto:info@devstudio.com" class="contact__link">
-                    <svg class="contact__icon" width="16" height="12">
-                        <use href="./image/logo/icons.svg#icon-mail"></use>
-                    </svg><span>info@devstudio.com</span></a>
-            </li>
+            <div class="contact-thumb">
 
-            <ul class="contact-social__list">
-                <li class="contact-social__item"><a class="contact-social__link" href="./">Instagram</a></li>
-                <li class="contact-social__item"><a class="contact-social__link" href="./">Twitter</a></li>
-                <li class="contact-social__item"><a class="contact-social__link" href="./">Facebook</a></li>
-                <li class="contact-social__item"><a class="contact-social__link" href="./">LinkedIn</a></li>
-            </li>
+                <ul class="contact">
+                    <li class="contact__item">
+                        <a href="tel:+380961111111" class="contact__link contact__link--tel">
+                            <svg class="contact__icon" width="10" height="16">
+                                <use href="./image/logo/icons.svg#icon-mobile"></use>
+                            </svg>+38 096 111 11 11</a>
+                    </li>
 
-        </ul>
-        </nav>
+                    <li class="contact__item">
+                        <a href="mailto:info@devstudio.com" class="contact__link">
+                            <svg class="contact__icon" width="16" height="12">
+                                <use href="./image/logo/icons.svg#icon-mail"></use>
+                            </svg><span>info@devstudio.com</span></a>
+                    </li>
+                </ul>
+
+                <ul class="contact-social__list">
+                        <li class="contact-social__item"><a class="contact-social__link" href="./">Instagram</a></li>
+                        <li class="contact-social__item"><a class="contact-social__link" href="./">Twitter</a></li>
+                        <li class="contact-social__item"><a class="contact-social__link" href="./">Facebook</a></li>
+                        <li class="contact-social__item"><a class="contact-social__link" href="./">LinkedIn</a></li>
+                </ul>
+            </div>
 
         </div>
-            
-<!-- 
-        <ul class="contact">
+        
 
-            <li class="contact__item">
-                <a href="mailto:info@devstudio.com" class="contact__link">
-                    <svg class="contact__icon" width="16" height="12">
-                        <use href="./image/logo/icons.svg#icon-mail"></use>
-                    </svg><span>info@devstudio.com</span></a>
-            </li>
-
-            <li class="contact__item">
-                <a href="tel:+380961111111" class="contact__link">
-                    <svg class="contact__icon" width="10" height="16">
-                        <use href="./image/logo/icons.svg#icon-mobile"></use>
-                    </svg>+38 096 111 11 11</a>
-            </li>
-
-        </ul> -->
     </div>
 
         
@@ -120,7 +184,7 @@
                 <use href="./image/logo/icons.svg#icon-clock"></use>
               </svg>
             </div>
-            <h3 class="feature__title">Пунктуальность"></h3>
+            <h3 class="feature__title">Пунктуальность</h3>
             <p class="feature__text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
           </li>
 
@@ -151,15 +215,41 @@
             <h2 class="specialization__title">Чем мы занимаемся</h2>
             <ul class="specialization__list">
                 <li class="specialization__item">
-                    <img src="./image/what1.jpg" alt="Мы пишем код" width="370px" height="294px">
+
+                    <picture>
+                        <source srcset="./image/desctop/app.webp 1x, ./image/desctop/app@2x.webp 2x, ./image/desctop/app@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/desctop/app.jpg 1x, ./image/desctop/app@2x.jpg 2x, ./image/desctop/app@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/app.jpg" 
+                        alt="Декстопные решения" 
+                        class="specialization__image">
+                    </picture>
+
                     <h3 class="specialization__label">Десктопные приложения</h3>
                 </li>
                 <li class="specialization__item">
-                    <img src="./image/what2.jpg" alt="Мы делаем адаптив" width="370px" height="294px">
+                    <picture>
+                        <source srcset="./image/desctop/app2.webp 1x, ./image/desctop/app2@2x.webp 2x, ./image/desctop/app2@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/desctop/app2.jpg 1x, ./image/desctop/app2@2x.jpg 2x, ./image/desctop/app2@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/app2.jpg" 
+                        alt="Мобильные решения" 
+                        class="specialization__image">
+                    </picture>
                     <h3 class="specialization__label">Мобильные приложения</h3>
                 </li>
                 <li class="specialization__item">
-                    <img src="./image/what3.jpg" alt="Мы делаем дизайн" width="370px" height="294px">
+                    <picture>
+                        <source srcset="./image/desctop/designer.webp 1x, ./image/desctop/designer@2x.webp 2x, ./image/desctop/designer@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/desctop/designer.jpg 1x, ./image/desctop/designer@2x.jpg 2x, ./image/desctop/designer@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/designer.jpg" 
+                        alt="Дизайнерские решения" 
+                        class="specialization__image">
+                    </picture>
                     <h3 class="specialization__label">Дизайнерские решения</h3>
                 </li>
             </ul>
@@ -173,7 +263,25 @@
             
             <ul class="card">
                 <li class="card__item">
-                    <img src="./image/igor.jpg" alt="Фото Игоря Демьяненко" width="270" height="260" class="card__image">
+
+                    <picture>
+                        <source srcset="./image/desctop/igor.webp 1x, ./image/desctop/igor@2x.webp 2x, ./image/desctop/igor@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/tablet/igor.webp 1x, ./image/tablet/igor@2x.webp 2x, ./image/tablet/igor@3x.webp 3x" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="./image/mobile/igor@2x.webp 1x, ./image/mobile/igor@2x.webp 2x, ./image/mobile/igor@3x.webp 3x" media="(min-width: 480px)" type="image/webp">
+                        <source srcset="./image/mobile/igor.webp 1x, ./image/mobile/igor@2x.webp 2x, ./image/mobile/igor@3x.webp 3x" media="(max-width: 479px)" type="image/webp">
+
+                        <source srcset="./image/desctop/igor.jpg 1x, ./image/desctop/igor@2x.jpg 2x, ./image/desctop/igor@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        <source srcset="./image/tablet/igor.jpg 1x, ./image/tablet/igor@2x.jpg 2x, ./image/tablet/igor@3x.jpg 3x" media="(min-width: 768px)" type="image/jpeg">
+                        <source srcset="./image/mobile/igor@2x.jpg 1x, ./image/mobile/igor@2x.jpg 2x, ./image/mobile/igor@3x.jpg 3x" media="(min-width: 480px)" type="image/jpeg">
+                        <source srcset="./image/mobile/igor.jpg 1x, ./image/mobile/igor@2x.jpg 2x, ./image/mobile/igor@3x.jpg 3x" media="(max-width: 479px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/igor.jpg" 
+                        alt="Фото Игоря Демьяненко" 
+                        class="card__image">
+
+                    </picture>
+
                     <div class="card__body">
                         <h3 class="card__title">Игорь Демьяненко</h3>
                         <p class="card__subtitle">Product Designer</p>
@@ -205,7 +313,24 @@
                     
                 </li>
                 <li class="card__item">
-                    <img src="./image/olga.jpg" alt="Фото Ольги Репина" width="270" height="260" class="card__image">
+
+                    <picture>
+                        <source srcset="./image/desctop/olga.webp 1x, ./image/desctop/olga@2x.webp 2x, ./image/desctop/olga@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/tablet/olga.webp 1x, ./image/tablet/olga@2x.webp 2x, ./image/tablet/olga@3x.webp 3x" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="./image/mobile/olga@2x.webp 1x, ./image/mobile/olga@2x.webp 2x, ./image/mobile/olga@3x.webp 3x" media="(min-width: 480px)" type="image/webp">
+                        <source srcset="./image/mobile/olga.webp 1x, ./image/mobile/olga@2x.webp 2x, ./image/mobile/olga@3x.webp 3x" media="(max-width: 479px)" type="image/webp">
+
+                        <source srcset="./image/desctop/olga.jpg 1x, ./image/desctop/olga@2x.jpg 2x, ./image/desctop/olga@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        <source srcset="./image/tablet/olga.jpg 1x, ./image/tablet/olga@2x.jpg 2x, ./image/tablet/olga@3x.jpg 3x" media="(min-width: 768px)" type="image/jpeg">
+                        <source srcset="./image/mobile/olga@2x.jpg 1x, ./image/mobile/olga@2x.jpg 2x, ./image/mobile/olga@3x.jpg 3x" media="(min-width: 480px)" type="image/jpeg">
+                        <source srcset="./image/mobile/olga.jpg 1x, ./image/mobile/olga@2x.jpg 2x, ./image/mobile/olga@3x.jpg 3x" media="(max-width: 479px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/igor.jpg" 
+                        alt="Фото Ольги Репина" 
+                        class="card__image">
+                    </picture>
+
                     <div class="card__body">
                         <h3 class="card__title">Ольга Репина</h3>
                         <p class="card__subtitle">Frontend Developer</p>
@@ -236,7 +361,24 @@
                     
                 </li>
                 <li class="card__item">
-                    <img src="./image/nikolay.jpg" alt="Фото Николая Тарасова" width="270" height="260" class="card__image">
+
+                    <picture>
+                        <source srcset="./image/desctop/kolya.webp 1x, ./image/desctop/kolya@2x.webp 2x, ./image/desctop/kolya@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/tablet/kolya.webp 1x, ./image/tablet/kolya@2x.webp 2x, ./image/tablet/kolya@3x.webp 3x" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="./image/mobile/kolya@2x.webp 1x, ./image/mobile/kolya@2x.webp 2x, ./image/mobile/kolya@3x.webp 3x" media="(min-width: 480px)" type="image/webp">
+                        <source srcset="./image/mobile/kolya.webp 1x, ./image/mobile/kolya@2x.webp 2x, ./image/mobile/kolya@3x.webp 3x" media="(max-width: 479px)" type="image/webp">
+
+                        <source srcset="./image/desctop/kolya.jpg 1x, ./image/desctop/kolya@2x.jpg 2x, ./image/desctop/kolya@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        <source srcset="./image/tablet/kolya.jpg 1x, ./image/tablet/kolya@2x.jpg 2x, ./image/tablet/kolya@3x.jpg 3x" media="(min-width: 768px)" type="image/jpeg">
+                        <source srcset="./image/mobile/kolya@2x.jpg 1x, ./image/mobile/kolya@2x.jpg 2x, ./image/mobile/kolya@3x.jpg 3x" media="(min-width: 480px)" type="image/jpeg">
+                        <source srcset="./image/mobile/kolya.jpg 1x, ./image/mobile/kolya@2x.jpg 2x, ./image/mobile/kolya@3x.jpg 3x" media="(max-width: 479px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/igor.jpg" 
+                        alt="Фото Николая Тарасова" 
+                        class="card__image">
+                    </picture>
+
                     <div class="card__body">
                         <h3 class="card__title">Николай Тарасов</h3>
                         <p class="card__subtitle">Marketing</p>
@@ -266,7 +408,24 @@
                     </div>
                 </li>
                 <li class="card__item">
-                    <img src="./image/mihail.jpg" alt="Фото Михаила Ермакова" width="270" height="260" class="card__image">
+
+                    <picture>
+                        <source srcset="./image/desctop/misha.webp 1x, ./image/desctop/misha@2x.webp 2x, ./image/desctop/misha@3x.webp 3x" media="(min-width: 1200px)" type="image/webp">
+                        <source srcset="./image/tablet/misha.webp 1x, ./image/tablet/misha@2x.webp 2x, ./image/tablet/misha@3x.webp 3x" media="(min-width: 768px)" type="image/webp">
+                        <source srcset="./image/mobile/misha@2x.webp 1x, ./image/mobile/misha@2x.webp 2x, ./image/mobile/misha@3x.webp 3x" media="(min-width: 480px)" type="image/webp">
+                        <source srcset="./image/mobile/misha.webp 1x, ./image/mobile/misha@2x.webp 2x, ./image/mobile/misha@3x.webp 3x" media="(max-width: 479px)" type="image/webp">
+
+                        <source srcset="./image/desctop/misha.jpg 1x, ./image/desctop/misha@2x.jpg 2x, ./image/desctop/misha@3x.jpg 3x" media="(min-width: 1200px)" type="image/jpeg">
+                        <source srcset="./image/tablet/misha.jpg 1x, ./image/tablet/misha@2x.jpg 2x, ./image/tablet/misha@3x.jpg 3x" media="(min-width: 768px)" type="image/jpeg">
+                        <source srcset="./image/mobile/misha@2x.jpg 1x, ./image/mobile/misha@2x.jpg 2x, ./image/mobile/misha@3x.jpg 3x" media="(min-width: 480px)" type="image/jpeg">
+                        <source srcset="./image/mobile/misha.jpg 1x, ./image/mobile/misha@2x.jpg 2x, ./image/mobile/misha@3x.jpg 3x" media="(max-width: 479px)" type="image/jpeg">
+                        
+                        <img 
+                        src="./image/mobile/igor.jpg" 
+                        alt="Фото Михаила Ермакова" 
+                        class="card__image">
+                    </picture>
+
                     <div class="card__body">
                         <h3 class="card__title">Михаил Ермаков</h3>
                         <p class="card__subtitle">UI Designer</p>
@@ -300,7 +459,8 @@
         </div>
     </section>
     <!-- Постоянные клиенты -->
-    <section class="clients">
+    <div class="footer__thumb">
+        <section class="clients">
         <div class="container">
             <h2 class="clients__title">Постоянные клиенты</h2>
             <ul class="clients__list">
@@ -339,7 +499,8 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container footer__flex">
+    <div class="container footer__row">
+        <div class="footer__flex">
         <div class="address">
 
             <a href="./portfolio.html" class="logo">
@@ -383,6 +544,8 @@
                 </a></li>
             </ul>
         </div>
+    
+    </div>
         <!-- Подписаться -->
         <div class="follow">
             <p class="follow__title">Подпишитесь на рассылку</p>
@@ -403,4 +566,6 @@
 </footer>
 
 <script src="./mobile-menu.js"></script>
+<script src="./modal.js"></script>
 </body>
+</html>
