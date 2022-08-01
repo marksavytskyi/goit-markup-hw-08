@@ -218,7 +218,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
-    background: #FFFFFF;
+    background: #FFFFFF; 
     cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
@@ -226,4 +226,6 @@
     &:hover {
             fill: #2196F3;
         }
+
+        
 }

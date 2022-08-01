@@ -13,8 +13,6 @@
     @extend %resetListStyles;
     @extend %resetTextStyles;
 
-    display: none;
-
     @media screen and (max-width: 767px) {
         margin-bottom: 64px;
     }
@@ -93,7 +91,7 @@
 
 .contact__link--tel {
     @media screen and (max-width:767px) {
-        color: $colorAccent;
+            color: $colorAccent;
             font-size: 34px;
             line-height: 1.17;
     }
